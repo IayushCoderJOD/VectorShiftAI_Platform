@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.node-box {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  position: relative;
+}
+
+/* For white background node */
+.node-white {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.node-dark {
+  background-color: #1c0b47;
+  border: 1px solid white;
+  color: white;
+}
+
+.node-header {
+  background-color: #430a89;
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding: 4px;
+  border-radius: 3px;
+  color: white;
+}
+
+.node-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.node-input,
+.node-select {
+  width: 100%;
+  padding: 4px 6px;
+  margin-top: 4px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.node-header {
+  background-color: #430a89;
+}
+
+.reusable-node {
+  width: 200px;
+  min-height: 80px;
+  border: 1px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.reusable-node-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.reusable-node-content {
+  margin-bottom: 8px;
+}
+
+.node-content {
+  color: white;
+}
