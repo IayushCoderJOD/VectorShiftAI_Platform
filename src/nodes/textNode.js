@@ -11,16 +11,17 @@ export const TextNode = ({ id, data }) => {
   };
 
   return (
-    <div style={{width: 200, height: 80, border: '1px solid black'}}>
-      <div>
+    <div className="node-box node-dark">
+      <div className="node-header">
         <span>Text</span>
       </div>
       <div>
-        <label>
+      <label className="node-label">
           Text:
           <input 
             type="text" 
             value={currText} 
+            className="node-input"
             onChange={handleTextChange} 
           />
         </label>

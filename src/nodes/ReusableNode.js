@@ -8,9 +8,10 @@ const ReusableNode = ({ id, title, inputs = [], outputs = [], content, style = {
     return total === 1 ? '50%' : `${((index + 1) * 100) / (total + 1)}%`;
   };
 
+
   return (
-    <div className="reusable-node" style={style}>
-      <div className="reusable-node-header">{title}</div>
+    <div  className="node-box node-dark" style={style}>
+      <div className="node-header">{title}</div>
 
       {inputs.map(({ id: inputId, label, style: inputStyle }, idx) => (
         <Handle
@@ -23,7 +24,7 @@ const ReusableNode = ({ id, title, inputs = [], outputs = [], content, style = {
         />
       ))}
 
-      <div className="reusable-node-content">{content}</div>
+      <div >{content}</div>
 
       {outputs.map(({ id: outputId, label, style: outputStyle }, idx) => (
         <Handle

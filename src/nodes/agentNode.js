@@ -5,7 +5,7 @@ export const AgentNode = ({ id, data }) => {
   return (
     <ReusableNode
       id={id}
-      title="LLM"
+      title="Agent"
       inputs={[
         { id: 'system' },
         { id: 'prompt' },
@@ -13,7 +13,7 @@ export const AgentNode = ({ id, data }) => {
       outputs={[{ id: 'response' }]}
       content={
         <div>
-          <span>This is a LLM.</span>
+          <span>This is an Agent.</span>
         </div>
       }
     />

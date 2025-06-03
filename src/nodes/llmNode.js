@@ -1,8 +1,9 @@
 import { Handle, Position } from 'reactflow';
 
 export const LLMNode = ({ id }) => {
+
   return (
-    <div className="node-box">
+    <div className="node-box node-dark">
       <Handle
         type="target"
         position={Position.Left}

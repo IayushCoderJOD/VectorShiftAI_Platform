@@ -63,27 +63,6 @@ code {
   background-color: #430a89;
 }
 
-.reusable-node {
-  width: 200px;
-  min-height: 80px;
-  border: 1px solid black;
-  padding: 10px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  background-color: white;
-  position: relative;
-  font-family: sans-serif;
-}
-
-.reusable-node-header {
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.reusable-node-content {
-  margin-bottom: 8px;
-}
-
 .node-content {
   color: white;
 }

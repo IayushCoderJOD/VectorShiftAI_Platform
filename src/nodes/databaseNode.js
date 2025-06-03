@@ -16,10 +16,10 @@ export const DatabaseNode = ({ id, data }) => {
           <label>
             Connection:
             <input
+            className='node-label'
               type="text"
               value={connectionName}
               onChange={(e) => setConnectionName(e.target.value)}
-            //   style={{ width: '100%' }}
             />
           </label>
           <label>
@@ -28,6 +28,7 @@ export const DatabaseNode = ({ id, data }) => {
               value={queryType}
               onChange={(e) => setQueryType(e.target.value)}
               style={{ width: '100%' }}
+              className='node-select'
             >
               <option value="SELECT">SELECT</option>
               <option value="INSERT">INSERT</option>

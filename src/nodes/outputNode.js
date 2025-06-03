@@ -14,29 +14,32 @@ export const OutputNode = ({ id, data }) => {
   const handleTypeChange = (e) => {
     setOutputType(e.target.value);
   };
-
   return (
-    <div style={{width: 200, height: 80, border: '1px solid black'}}>
+    <div className="node-box node-dark">
       <Handle
         type="target"
         position={Position.Left}
         id={`${id}-value`}
       />
-      <div>
+      <div className="node-header">
         <span>Output</span>
       </div>
       <div>
-        <label>
+      <label className="node-label">
           Name:
-          <input 
-            type="text" 
-            value={currName} 
-            onChange={handleNameChange} 
+          <input
+            type="text"
+            value={currName}
+            onChange={handleNameChange}
+            className="node-input"
           />
         </label>
-        <label>
+        <label className="node-label">
           Type:
-          <select value={outputType} onChange={handleTypeChange}>
+          <select 
+          className="node-select"
+          
+          value={outputType} onChange={handleTypeChange}>
             <option value="Text">Text</option>
             <option value="File">Image</option>
           </select>
