@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReusableNode from './ReusableNode';
+import AutoResizeTextarea from '../reusableComps/AutoResizeTextArea';
 
 export const DatabaseNode = ({ id, data }) => {
   const [connectionName, setConnectionName] = useState(data?.connectionName || id.replace('db-', 'db_'));
@@ -15,12 +16,8 @@ export const DatabaseNode = ({ id, data }) => {
         <div>
           <label>
             Connection:
-            <input
-            className='node-label'
-              type="text"
-              value={connectionName}
-              onChange={(e) => setConnectionName(e.target.value)}
-            />
+            <AutoResizeTextarea    value={connectionName}   onChange={(e) => setConnectionName(e.target.value)} type="text"
+            className="node-label" />
           </label>
           <label>
             Query Type:

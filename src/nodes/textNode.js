@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Handle, Position } from 'reactflow';
+import AutoResizeTextarea from '../reusableComps/AutoResizeTextArea';
 
 export const TextNode = ({ id, data }) => {
   const [currText, setCurrText] = useState(data?.text || '{{input}}');
@@ -16,14 +17,10 @@ export const TextNode = ({ id, data }) => {
         <span>Text</span>
       </div>
       <div>
-      <label className="node-label">
+        <label className="node-label">
           Text:
-          <input 
-            type="text" 
-            value={currText} 
-            className="node-input"
-            onChange={handleTextChange} 
-          />
+          <AutoResizeTextarea value={currText} onChange={handleTextChange} type="text"
+            className="node-input" />
         </label>
       </div>
       <Handle

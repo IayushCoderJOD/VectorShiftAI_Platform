@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import ReusableNode from './ReusableNode';
+import AutoResizeTextarea from '../reusableComps/AutoResizeTextArea';
 
 export const ApiNode = ({ id, data }) => {
-  const [apiUrl, setApiUrl] = useState(data?.apiUrl || '');
+  const [apiUrl, setApiUrl] = useState(data?.apiUrl || 'https://jsonplaceholder.typicode.com/todos/');
   const [method, setMethod] = useState(data?.method || 'GET');
 
   return (
@@ -15,12 +16,9 @@ export const ApiNode = ({ id, data }) => {
         <div>
           <label>
             URL:
-            <input
-              type="text"
-              value={apiUrl}
-              onChange={(e) => setApiUrl(e.target.value)}
-              style={{ width: '100%' }}
-            />
+
+             <AutoResizeTextarea    value={apiUrl} onChange={(e) => setApiUrl(e.target.value)} type="text"
+            className="node-label" />
           </label>
           <label>
             Method:
